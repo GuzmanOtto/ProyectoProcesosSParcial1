@@ -1,0 +1,10 @@
+library(wordcloud)
+library(tm)
+
+
+archivo <- read.csv2("Tags.csv", header = TRUE)
+
+etiqueta = (archivo$TagName)
+numero = (archivo$Count)
+
+wordcloud(etiqueta, numero, random.order =  FALSE, rot.per = 0.3, scale = c(4,.5),max.words = 2144)
